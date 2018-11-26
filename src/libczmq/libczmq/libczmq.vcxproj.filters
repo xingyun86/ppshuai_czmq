@@ -56,8 +56,12 @@
     <None Include="..\czmq\src\zsock_option.inc">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="..\czmq\src\foreign\sha1\sha1.inc_c" />
-    <None Include="..\czmq\src\foreign\slre\slre.inc_c" />
+    <None Include="..\czmq\src\foreign\sha1\sha1.inc_c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="..\czmq\src\foreign\slre\slre.inc_c">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\czmq\src\czmq_private_selftest.c">
