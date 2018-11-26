@@ -16,7 +16,9 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
-    <Text Include="..\czmq\src\foreign\slre\readme.txt" />
+    <Text Include="..\czmq\src\foreign\slre\readme.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\czmq\include\czmq.h">
