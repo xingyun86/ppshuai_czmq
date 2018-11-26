@@ -231,7 +231,7 @@ zargs_hasx (zargs_t *self, const char *name, ...) {
         name = va_arg (args, const char *);
     }
     va_end (args);
-    return NULL;
+    return false;
 }
 
 

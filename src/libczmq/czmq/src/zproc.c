@@ -446,7 +446,7 @@ s_fd_in_handler (zloop_t *self, zmq_pollitem_t *item, void *socket)
 #if defined (PIPE_BUF)
 #   define BUF_SIZE PIPE_BUF
 #else
-#   define BUF_SIZE 65535
+#   define BUF_SIZE MAXWORD
 #endif
     byte buf [BUF_SIZE];
     ssize_t r = 1;
@@ -561,8 +561,8 @@ s_zproc_alive (zloop_t *loop, int timer_id, void *args)
         }
         return -1;
     }
-    return 0;
 #endif
+    return 0;
 }
 
 static int
@@ -1276,7 +1276,7 @@ zproc_test (bool verbose)
 
     int r = zproc_run (self);
     assert (r == 0);
-    int t = zclock_mono ();
+    int64_t t = zclock_mono ();
     r = zproc_wait (self, 8000);
     assert (r == 0);
     t = zclock_mono () - t;

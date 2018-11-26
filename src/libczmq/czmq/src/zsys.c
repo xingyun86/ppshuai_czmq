@@ -1853,7 +1853,7 @@ s_zsys_zprintf (const char *format, void *args, zsys_lookup_fn lookup_fn, bool v
 {
     assert (format);
     assert (args);
-    zchunk_t *chunk = zchunk_new (NULL, strlen (format) * 1.5);
+    zchunk_t *chunk = zchunk_new (NULL, strlen (format) * sizeof(WORD));
     assert (chunk);
     char *ret = NULL;
 
